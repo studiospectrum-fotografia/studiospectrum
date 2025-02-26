@@ -1,6 +1,7 @@
 // app/page.tsx
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Certifcate() {
   const [modalImage, setModalImage] = useState<string | null>(null);
@@ -22,7 +23,7 @@ export default function Certifcate() {
                 setModalImage("/certificado_isadora_parreiras.png")
               }
             >
-              <img
+              <Image
                 src="/certificado_isadora_parreiras.png"
                 alt="Certificado Isadora Parreiras"
                 width={800}
@@ -37,7 +38,7 @@ export default function Certifcate() {
               className="cursor-pointer"
               onClick={() => setModalImage("/conteudo.png")}
             >
-              <img
+              <Image
                 src="/conteudo.png"
                 alt="Agenda do Curso"
                 width={800}
@@ -67,7 +68,7 @@ export default function Certifcate() {
           onClick={() => setModalImage(null)}
         >
           <div className="relative" onClick={(e) => e.stopPropagation()}>
-            <img
+            <Image
               src={modalImage}
               alt="Visualização Ampliada"
               width={1200}
